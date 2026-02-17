@@ -29,9 +29,15 @@ export default function AdminPage() {
     try {
       const res = await fetch('/api/patients')
       const data = await res.json()
-      setPatients(data)
+      if (Array.isArray(data)) {
+        setPatients(data)
+      } else {
+        console.error('API error:', data)
+        setPatients([])
+      }
     } catch (error) {
       console.error('Failed to fetch patients:', error)
+      setPatients([])
     } finally {
       setLoading(false)
     }
