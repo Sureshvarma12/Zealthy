@@ -93,10 +93,17 @@ export default function LoginPage() {
             </button>
           </div>
         </form>
-        <div className="text-center">
-          <a href="/admin" className="text-sm text-indigo-600 hover:text-indigo-500">
-            Admin Portal →
-          </a>
+        <div className="text-center space-y-2">
+          <div>
+            <a href="/register" className="text-sm text-indigo-600 hover:text-indigo-500 font-medium">
+              Don't have an account? Sign up
+            </a>
+          </div>
+          <div>
+            <a href="/admin" className="text-sm text-gray-600 hover:text-gray-500">
+              Admin Portal →
+            </a>
+          </div>
         </div>
       </div>
     </div>
